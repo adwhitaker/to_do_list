@@ -1,0 +1,62 @@
+body {
+  background-color: lightsteelblue;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bolder;
+  color: purple;
+}
+h1, h2 {
+  text-shadow: 1px 1px lightgrey;
+}
+form {
+  text-align: center;
+  margin: 0 auto;
+
+}
+input {
+  width: 350px;
+  height: 40px;
+  border: none;
+  background-color: lightgrey;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 16px;
+  font-weight: bolder;
+  color: purple;
+  padding-left: 10px;
+  box-shadow: 3px 5px 35px steelblue;
+}
+.itemDiv {
+  margin: 2px auto 2px auto;
+  width: 550px;
+  border: steelblue solid 2px;
+  border-top: 1px,
+  border-bottom: 1px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px steelblue;
+  background-color: lightgrey;
+}
+
+p {
+  display: inline-block;
+  width: 350px;
+  font-size: 20px;
+  color: purple;
+}
+
+button {
+  height: 40px;
+  color: purple;
+  background-color: lightsteelblue;
+  border-radius: 20px;
+  border: steelblue solid 2px;
+  box-shadow: 5px 5px 5px steelblue;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.completeTask {
+  text-decoration: line-through;
+  color: steelblue;
+}
