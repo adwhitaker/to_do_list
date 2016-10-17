@@ -3,6 +3,9 @@ $(function () {
     $('.tasks').on('click', '.delete', deleteTodo);
     $('.tasks').on('click', '.complete', completeTodo);
 
+    $('.todos').sortable();
+    $('.todos').disableSelection();
+
     getTodos();
   });
 
@@ -12,9 +15,6 @@ function getTodos() {
     .then(function (toDoItems) {
       console.log(toDoItems);
       appendItems(toDoItems);
-    })
-    .catch(function () {
-      console.log('To dos were not retreived');
     });
 };
 
@@ -65,7 +65,7 @@ function addTodo(event) {
       getTodos();
     })
     .catch(function () {
-      console.log('To do was not added');
+      console.log('no todos');
     });
 
   $('input[type=text]').val('');
@@ -86,7 +86,7 @@ function deleteTodo() {
       },
 
       error: function () {
-        console.log('could not delete todo');
+        console.log('no todos');
       },
     });
 
@@ -114,7 +114,7 @@ function completeTodo() {
     data: completeData,
     success: getTodos,
     error: function () {
-      console.log('To do could not be updated');
+      console.log('no todos');
     },
   });
 }
