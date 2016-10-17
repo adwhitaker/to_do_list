@@ -14,7 +14,7 @@ function getTodos() {
       appendItems(toDoItems);
     })
     .catch(function () {
-      console.log('no todos');
+      console.log('To dos were not retreived');
     });
 };
 
@@ -65,7 +65,7 @@ function addTodo(event) {
       getTodos();
     })
     .catch(function () {
-      console.log('no todos');
+      console.log('To do was not added');
     });
 
   $('input[type=text]').val('');
@@ -86,7 +86,7 @@ function deleteTodo() {
       },
 
       error: function () {
-        console.log('no todos');
+        console.log('could not delete todo');
       },
     });
 
@@ -114,7 +114,7 @@ function completeTodo() {
     data: completeData,
     success: getTodos,
     error: function () {
-      console.log('no todos');
+      console.log('To do could not be updated');
     },
   });
 }
