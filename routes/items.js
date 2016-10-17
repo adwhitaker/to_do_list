@@ -62,7 +62,6 @@ function postToDos(req, res) {
           }
 
           res.sendStatus(200);
-          // res.send(result.rows);
         });
     } finally {
       done();
@@ -99,6 +98,7 @@ function deleteToDos(req, res) {
   });
 };
 
+// updates an item in the database
 function updateToDos(req, res) {
   var id = req.params.id;
   var complete = (req.body.complete);
